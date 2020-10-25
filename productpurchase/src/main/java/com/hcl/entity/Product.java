@@ -8,8 +8,7 @@ public class Product implements Serializable {
 	private String productType;
 	private double cost;
 	private char promotionApplicable;
-	
-	
+
 	public Product(int productId, String productName, String productType, double cost, char promotionApplicable) {
 		super();
 		this.productId = productId;
@@ -18,37 +17,47 @@ public class Product implements Serializable {
 		this.cost = cost;
 		this.promotionApplicable = promotionApplicable;
 	}
-	
+
 	public int getProductId() {
 		return productId;
 	}
+
 	public void setProductId(int productId) {
 		this.productId = productId;
 	}
+
 	public String getProductName() {
 		return productName;
 	}
+
 	public void setProductName(String productName) {
 		this.productName = productName;
 	}
+
 	public String getProductType() {
 		return productType;
 	}
+
 	public void setProductType(String productType) {
 		this.productType = productType;
 	}
+
 	public double getCost() {
 		return cost;
 	}
+
 	public void setCost(double cost) {
 		this.cost = cost;
 	}
+
 	public char getPromotionApplicable() {
 		return promotionApplicable;
 	}
+
 	public void setPromotionApplicable(char promotionApplicable) {
 		this.promotionApplicable = promotionApplicable;
 	}
+
 	@Override
 	public int hashCode() {
 		final int prime = 31;
@@ -62,6 +71,7 @@ public class Product implements Serializable {
 		result = prime * result + promotionApplicable;
 		return result;
 	}
+
 	@Override
 	public boolean equals(Object obj) {
 		if (this == obj)
@@ -89,15 +99,11 @@ public class Product implements Serializable {
 			return false;
 		return true;
 	}
+
 	@Override
 	public String toString() {
 		return "Product [productId=" + productId + ", productName=" + productName + ", productType=" + productType
 				+ ", cost=" + cost + ", promotionApplicable=" + promotionApplicable + "]";
 	}
-	
-	
-	
 
 }
-
-

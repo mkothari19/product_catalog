@@ -17,33 +17,9 @@ public class Cart implements Discount{
 	private double total;
 
 	ProductPurchase ProductPurchase ;
+	
 	List<ProductPurchase> productPurchaseList = new ArrayList<ProductPurchase>();
 	
-	 private static Cart instance;
-	private Cart() {
-		
-	}
-	
-	 public static Cart getInstance(){
-	        if (instance == null) {
-	        	  synchronized (Cart.class) {
-	        		  if(instance == null){
-	            instance = new Cart();
-	        		  }
-	        	  }
-	        } 
-
-	        return instance;
-	    }
-	
-/*
- * Add product to cart
- */
-	 public void cleanCart() {
-		 productPurchaseList.clear();	
-		 total=0.0;
-		 
-	 }
 	 
 	public void addToCart(Product product,User user) {
 		
@@ -127,4 +103,10 @@ public class Cart implements Discount{
 		}
 		return total;
 }
+	public List<ProductPurchase> getProductPurchaseList() {
+		return productPurchaseList;
+	}
+
+	
+	
 }

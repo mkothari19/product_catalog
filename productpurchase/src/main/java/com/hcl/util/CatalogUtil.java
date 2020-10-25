@@ -6,36 +6,38 @@ import com.hcl.data.InMemoryData;
 import com.hcl.entity.User;
 
 public class CatalogUtil {
-	
-private CatalogUtil() {
-		
-	}
-	 private static CatalogUtil  instance;
-	 public static CatalogUtil getInstance(){
-	        if (instance == null) {
-	        	  synchronized (CatalogUtil.class) {
-	        		  if(instance == null){
-	            instance = new CatalogUtil();
-	        		  }
-	        	  }
-	        } 
 
-	        return instance;
-	    }
-	
+	private CatalogUtil() {
+
+	}
+
+	private static CatalogUtil instance;
+
+	public static CatalogUtil getInstance() {
+		if (instance == null) {
+			synchronized (CatalogUtil.class) {
+				if (instance == null) {
+					instance = new CatalogUtil();
+				}
+			}
+		}
+
+		return instance;
+	}
+
 	public double discount(int discountPer, double total) {
 
-			return total - (total * discountPer) / 100;
-	
+		return total - (total * discountPer) / 100;
+
 	}
 
-	public  boolean isOldUser(int userid) {
+	public boolean isOldUser(int userid) {
 		List<User> userList = InMemoryData.getInstance().getUserList();
 		User olduser = InMemoryData.getInstance().selectUser(userid, userList);
-		
-		if(olduser==null) {
+
+		if (olduser == null) {
 			return false;
-		}else {
+		} else {
 			return true;
 		}
 	}

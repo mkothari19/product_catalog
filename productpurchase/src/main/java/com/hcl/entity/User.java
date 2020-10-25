@@ -5,48 +5,47 @@ public class User {
 	private String name;
 	private boolean isNewUser;
 	private String email;
-	
-	
-	
-	
-	public User(int id, String name, boolean newUser,String email) {
+
+	public User(int id, String name, boolean newUser, String email) {
 		super();
 		this.id = id;
 		this.name = name;
 		this.isNewUser = newUser;
-		this.email=email;
+		this.email = email;
 	}
-	
-	
+
 	public String getEmail() {
 		return email;
 	}
-
 
 	public void setEmail(String email) {
 		this.email = email;
 	}
 
-
 	public int getId() {
 		return id;
 	}
+
 	public void setId(int id) {
 		this.id = id;
 	}
+
 	public String getName() {
 		return name;
 	}
+
 	public void setName(String name) {
 		this.name = name;
 	}
+
 	public boolean getIsNewUser() {
 		return isNewUser;
 	}
+
 	public void setIsNewUser(boolean newUser) {
 		this.isNewUser = newUser;
 	}
-	
+
 	@Override
 	public int hashCode() {
 		final int prime = 31;
@@ -56,7 +55,6 @@ public class User {
 		result = prime * result + ((name == null) ? 0 : name.hashCode());
 		return result;
 	}
-
 
 	@Override
 	public boolean equals(Object obj) {
@@ -78,12 +76,10 @@ public class User {
 			return false;
 		return true;
 	}
+
 	@Override
 	public String toString() {
 		return "User [id=" + id + ", name=" + name + ", newUser=" + isNewUser + "]";
 	}
-	
-	
-	
 
 }

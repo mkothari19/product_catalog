@@ -21,6 +21,7 @@ public class ProductPurchase {
 		Date date = new Date();
 		this.date = date;
 	}
+
 	@Override
 	public int hashCode() {
 		final int prime = 31;
@@ -29,6 +30,7 @@ public class ProductPurchase {
 		result = prime * result + ((product == null) ? 0 : product.hashCode());
 		return result;
 	}
+
 	@Override
 	public boolean equals(Object obj) {
 		if (this == obj)
@@ -50,20 +52,25 @@ public class ProductPurchase {
 			return false;
 		return true;
 	}
+
 	public Product getProduct() {
 		return product;
 	}
+
 	public void setProduct(Product product) {
 		this.product = product;
 	}
+
 	public Date getDate() {
 		return date;
 	}
+
 	public User getUser() {
 		return user;
 	}
+
 	public void setUser(User user) {
 		this.user = user;
 	}
-	
+
 }
