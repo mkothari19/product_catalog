@@ -8,12 +8,10 @@ import java.util.List;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
-import com.hcl.business.Cart;
 import com.hcl.business.ProductCatelog;
 import com.hcl.data.InMemoryData;
 import com.hcl.entity.Product;
 import com.hcl.entity.User;
-import com.hcl.util.CatalogUtil;
 
 public class CatalogTest {
 

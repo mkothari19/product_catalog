@@ -5,7 +5,6 @@ import java.util.stream.Collectors;
 
 import com.hcl.data.InMemoryData;
 import com.hcl.entity.Product;
-import com.hcl.entity.User;
 
 public class ProductCatelog {
 

@@ -7,7 +7,6 @@ import com.hcl.business.ProductCatelog;
 import com.hcl.data.InMemoryData;
 import com.hcl.entity.Product;
 import com.hcl.entity.User;
-import com.hcl.util.CatalogUtil;
 
 /**
  * Hello world!
