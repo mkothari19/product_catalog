@@ -33,8 +33,8 @@ public class Driver {
 		// Add dummy product and user to cart
 		User user =new User(5,"Maneesh",true,"manishkothari1982@gmail.com");
 		Cart newusercat=new Cart();
-		for(int i=10;i<11;i++) {
-			newusercat.addToCart(new Product(20, "productName" , "productType", 150, 'Y'),user) ;
+		for(int i=10;i<12;i++) {
+			newusercat.addToCart(new Product(i, "productName"+i , "productType", 150, 'Y'),user) ;
 		}
 		
 		System.out.println(newusercat.getProductPurchaseList());
