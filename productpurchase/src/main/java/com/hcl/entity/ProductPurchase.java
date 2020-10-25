@@ -73,4 +73,9 @@ public class ProductPurchase {
 		this.user = user;
 	}
 
+	@Override
+	public String toString() {
+		return "ProductPurchase [product=" + product + ", date=" + date + ", user=" + user + "]";
+	}
+
 }

@@ -90,4 +90,14 @@ public class CartTest {
 		assertEquals("360.0", total);
 
 	}
+	
+	@Test
+	public void testgetPurchaseList() {
+		Cart newusercat = new Cart();
+		User olduser2 = inMemory.selectUser(2, userList);
+	   newusercat.addToCart(new Product(20, "productName" , "productType", 150, 'Y'), olduser2);
+	    String result= "[ProductPurchase [product=Product [productId=20, productName=productName, productType=productType, cost=150.0, promotionApplicable=Y], date="+newusercat.getProductPurchaseList().get(0).getDate()+", user=User [id=2, name=Deepak, newUser=false]]]";
+		assertEquals(result, newusercat.getProductPurchaseList().toString());
+
+	}
 }

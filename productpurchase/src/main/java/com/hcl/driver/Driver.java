@@ -34,10 +34,11 @@ public class Driver {
 		// Add dummy product and user to cart
 		User user =new User(5,"Maneesh",true,"manishkothari1982@gmail.com");
 		Cart newusercat=new Cart();
-		for(int i=10;i<15;i++) {
-			newusercat.addToCart(new Product(10, "productName"+i,"productType"+i,120.0,'Y'),user) ;
+		for(int i=10;i<11;i++) {
+			newusercat.addToCart(new Product(20, "productName" , "productType", 150, 'Y'),user) ;
 		}
 		
+		System.out.println(newusercat.getProductPurchaseList());
 		System.out.println("Actual Price for new user:: "+newusercat.cartTotal());
 	   System.out.println("After 10% discount for new user :: "+newusercat.cartTotalAfterNewUserDiscount());
 	 
