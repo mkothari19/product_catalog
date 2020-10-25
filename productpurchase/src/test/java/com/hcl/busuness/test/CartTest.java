@@ -11,7 +11,6 @@ import com.hcl.business.Cart;
 import com.hcl.business.ProductCatelog;
 import com.hcl.data.InMemoryData;
 import com.hcl.entity.Product;
-import com.hcl.entity.ProductPurchase;
 import com.hcl.entity.User;
 
 public class CartTest {
