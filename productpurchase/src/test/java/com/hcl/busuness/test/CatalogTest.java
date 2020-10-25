@@ -47,15 +47,31 @@ public class CatalogTest {
 		List<Product> list = new ArrayList<>();
 		list.add(new Product(1, "ABC Mutual Funds", "Finance", 1000, 'Y'));
 		list.add(new Product(3, "PQR Shares", "Finance", 3000, 'Y'));
-		List<Product> financeproduct = productCatelogObj.filterProduct(productCatelog, "promotion", "Y");
-		assertEquals(list, financeproduct);
+		List<Product> promotionappliedproduct = productCatelogObj.filterProduct(productCatelog, "promotion", "Y");
+		assertEquals(list, promotionappliedproduct);
 	}
-
+	@Test
 	public void testFileterByPromotionNotApplied() {
 		List<Product> list = new ArrayList<>();
 		list.add(new Product(2, "XYZ Co Shares", "Finance", 200, 'N'));
-		List<Product> financeproduct = productCatelogObj.filterProduct(productCatelog, "promotion", "N");
-		assertEquals(list, financeproduct);
+		list.add(new Product(4, "123 Mutual Funds", "Capital Market", 100, 'N'));
+		list.add(new Product(5, "345 Mutual Funds", "Capital Market", 200, 'N'));
+		List<Product> promotionnotappliedproduct = productCatelogObj.filterProduct(productCatelog, "promotion", "N");
+		assertEquals(list, promotionnotappliedproduct);
+	}
+
+	@Test
+	public void testgetAllProductd() {
+		List<Product> list = new ArrayList<>();
+		list.add(new Product(1, "ABC Mutual Funds", "Finance", 1000, 'Y'));
+
+		list.add(new Product(2, "XYZ Co Shares", "Finance", 200, 'N'));
+		list.add(new Product(3, "PQR Shares", "Finance", 3000, 'Y'));
+
+		list.add(new Product(4, "123 Mutual Funds", "Capital Market", 100, 'N'));
+		list.add(new Product(5, "345 Mutual Funds", "Capital Market", 200, 'N'));
+		List<Product> allproduct = productCatelogObj.getAllProduct();
+		assertEquals(list, allproduct);
 	}
 
 }

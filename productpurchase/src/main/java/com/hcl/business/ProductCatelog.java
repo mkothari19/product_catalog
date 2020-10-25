@@ -3,6 +3,7 @@ package com.hcl.business;
 import java.util.List;
 import java.util.stream.Collectors;
 
+import com.hcl.data.InMemoryData;
 import com.hcl.entity.Product;
 import com.hcl.entity.User;
 
@@ -27,5 +28,9 @@ public class ProductCatelog {
 
 		return filteredProduct;
 	}
+	public List<Product> getAllProduct() {
 
+		return InMemoryData.getInstance().getProductCatelog();
+	}
+	
 }
